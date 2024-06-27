@@ -1,0 +1,40 @@
+#wrapper{
+    display: flex;
+    width: 1100px;
+    margin: auto;
+    margin-top: 200px;
+}
+.column1{
+    display: flex;
+}
+.column1 .fa-briefcase{
+    font-size: 3rem;
+    color: brown;
+    margin: 20px 50px 0 0;
+}
+.column1 .fa-book{
+    font-size: 3rem;
+    color: brown;
+    margin: 20px 50px 0 0;
+}
+h1{
+    font-family: "Montserrat", sans-serif;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    line-height: 30px;
+}
+h2{
+    font-family: "Montserrat", sans-serif;
+    width: 600px;
+    margin: auto;
+    color: green;
+    font-size: 3rem;
+}
+.line{
+    width: 40px;
+    height: 2px;
+    background-color: red;
+    margin: auto;
+}

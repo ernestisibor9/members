@@ -1,0 +1,138 @@
+NODE 
+
+	Setting up the project dependencies
+
+- cd into the backend folder
+- run "npm init -y" to generate the package.json
+
+	Install some packages
+- bcryptjs
+- cloudinary
+- cookieparser
+- cors
+- dotenv
+- express
+- express async handler
+- jsonwebtoken
+- sendgrid
+- mongoose
+- multer
+- multer storage cloudinary
+- sharp
+- nodemon
+	
+
+Create Expressjs server
+
+- const express = require('express');
+const app = express();
+
+// route
+
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
+
+Connecting Express to MongoDB
+
+- Create .env file to put your MongoDB credentials
+- MONGO_URL = "mongodb://localhost:27017/my-test"
+
+- Create a folder to hold your database connection
+const mongoose = require("mongoose");
+
+const myConnection = () => {
+  mongoose
+    .connect(process.env.MONGO_URL)
+
+    .then(() => {
+      console.log("Database connected successfully");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+module.exports = myConnection
+
+- In the server.js
+
+- const express = require('express');
+const app = express();
+const dbConfig = require('./config/dbConfig')
+
+const dotenv = require('dotenv');
+dotenv.config()
+
+dbConfig()
+
+// route
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
+
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
